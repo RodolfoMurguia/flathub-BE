@@ -16,6 +16,8 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
+  console.log(process.env.GITHUB_TOKEN);
+
   await app.listen(process.env.PORT);
 }
 bootstrap();
