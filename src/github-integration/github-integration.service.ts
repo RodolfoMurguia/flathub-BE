@@ -15,7 +15,7 @@ export class GithubIntegrationService {
     this.logger.log('Connecting to Github');
 
     return new Octokit({
-      auth: process.env.GITHUB_TOKEN,
+      auth: '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',
     });
   }
 

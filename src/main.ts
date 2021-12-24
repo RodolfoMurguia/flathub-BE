@@ -8,8 +8,8 @@ async function bootstrap() {
 
   //Added Swagger Configuration
   const config = new DocumentBuilder()
-    .setTitle('Blog API')
-    .setDescription('Blog API')
+    .setTitle('Flathub API')
+    .setDescription('Flathub API')
     .setVersion('1.0')
     .build();
 
@@ -18,6 +18,6 @@ async function bootstrap() {
 
   console.log(process.env.GITHUB_TOKEN);
 
-  await app.listen(process.env.PORT);
+  await app.listen(process.env.PORT || 8080);
 }
 bootstrap();
